@@ -1,0 +1,13 @@
+@navColor: #3e86ce;
+@info: #3e86ce;
+@danger: #ff4949;
+@warning: #f7ba2a;
+@success: #13ce66;
+
+// 创建三角形的方法
+.arrow(@w: 10px, @c: #000, @dir: top) {
+	font-size: 0;
+	width: 0;
+	border: @w solid transparent;
+	border-@{dir}-color: @c;
+}

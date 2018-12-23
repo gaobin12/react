@@ -1,0 +1,81 @@
+@import url(../../base.less);
+
+.app-home {
+	.home-banner {
+		background: @color;
+		color: #fff;
+		text-align: center;
+		padding: 80px 0 100px;
+		.logo {
+			@h: 140px;
+			.wcenter(@h);
+			.hlh(@h);
+			font-size: 100px;
+			border: 1px solid #fff;
+			border-radius: 15px;
+		}
+		h1 {
+			.wcenter(750px, 30px);
+			font-size: 28px;
+			line-height: 40px;
+		}
+		.btn {
+			.ui-btn(#fff, @color);
+		}
+		p {
+			margin-top: 30px;
+			color: lighten(@color, 25%);
+		}
+	}
+	.first-list {
+		padding: 120px 0 80px;
+		border-bottom: 1px solid #ccc;
+		text-align: center;
+		h2 {
+			font-size: 32px;
+		}
+		.info {
+			.wcenter(880px, 15px, 0);
+			font-size: 20px;
+		}
+		.line {
+			.wcenter(100px, 40px);
+			border-bottom: 1px solid #efefef;
+		}
+		ul {
+			li {
+				float: left;
+				width: 100%/3;
+				list-style: none;
+			}
+			img {
+				width: 80%;
+			}
+			p {
+				font-size: 16px;
+				line-height: 28px;
+				padding: 0 10px;
+			}
+		}
+		.btn {
+			.ui-btn();
+			margin-top: 20px;
+		}
+	}
+	// 在第二个列表中，复用第一个列表的样式
+	.second-list {
+		// 混合复用样式
+		.first-list;
+		// 重写样式注意权重
+		ul {
+			li {
+				width: 100%/4;
+				padding: 0 1px;
+				box-sizing: border-box;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

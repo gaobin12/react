@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.skin {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 40px 0;
+	.container {
+		width: 1118px;
+		margin: 0 auto;
+		ul {
+			margin-right: -10px;
+			&:after {
+				clear: both;
+				display: block;
+				content: '';
+			}
+			li {
+				float: left;
+				width: 178px;
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}
+			p {
+				text-align: center;
+				padding: 5px 0 10px;
+			}
+		}
+	}
+}

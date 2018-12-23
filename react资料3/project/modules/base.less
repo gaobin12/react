@@ -1,0 +1,25 @@
+@color: #5b4282;
+
+// 定义一些方法
+// 块元素居中
+.wcenter(@w: auto, @mt: 0, @mb: @mt) {
+	width: @w;
+	margin: @mt auto @mb;
+}
+// 字体垂直居中
+.hlh(@h: auto) {
+	height: @h;
+	line-height: @h;
+}
+// 按钮组件样式
+.ui-btn(@c: @color, @bg: #fff) {
+	color: @c;
+	border-color: @c;
+	background: @bg;
+	font-size: 18px;
+	padding: 12px 40px;
+	&:hover {
+		color: @bg;
+		background: @c;
+	}
+}

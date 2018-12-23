@@ -1,0 +1,31 @@
+// 引入样式库
+@import url('../../base.less');
+.ickt-header {
+	display: flex;
+	background: @navColor;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	.header-left,
+	.header-right {
+		width: 50px;
+	}
+	h1 {
+		flex: 1;
+		font-size: 22px;
+	}
+	.header-left {
+		position: relative;
+	}
+	.arrow {
+		.arrow(8px, #fff, right);
+		position: absolute;
+		top: 16px;
+		left: 12px;
+		.blue {
+			border-right-color: @navColor;
+			top: -8px;
+			left: -6px;
+		}
+	}
+}

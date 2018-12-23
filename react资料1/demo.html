@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		#app {
+			color: red;
+			 background: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="app"></div>
+	<div id="demo"></div>
+<script type="text/javascript" src="lib/react.js"></script>
+<script type="text/javascript" src="lib/react-dom.js"></script>
+<script type="text/javascript" src="lib/browser.js"></script>
+<script type="text/babel">
+	var Demo = React.createClass({
+		clickBtn(e, id, oe) {
+			console.log(arguments)
+			console.log(e.target, e.currentTarget)
+			console.log(oe.target, oe.currentTarget)
+		},
+		render() {
+			return <button onClick={this.clickBtn}>按钮</button> 
+		}
+	})
+	ReactDOM.render(<Demo></Demo>, app)
+</script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<style type="text/css">
+.demo {
+	margin: 100px;
+	width: 200px;
+	height: 200px;
+	border: 20px dashed orange;
+	padding: 50px;
+	background: green;
+}
+</style>
+<div class="demo"></div>
+<input type="text">
+</body>
+</html> -->
